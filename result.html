@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html amp lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+     <base target="_top">
+    <title>タスクステータス送信結果</title>
+    
+    <!-- Bootstrap -->
+    <?!= HtmlService.createHtmlOutputFromFile('stylesheet').getContent(); ?>
+    <!-- amp -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+   
+  </head>
+  <body>
+  
+  <div class="header">
+   <?var url = getScriptUrl();?><a style="color:#ffffff; font-size: 26px;" href = '<?!=url?>' target="_blank"><i class="fas fa-cat" style="font-size: 30px; color:#ffffff;"></i><?=title?> </a>
+  </div>
+  
+　<div class="resultmessage"> 送信しました。</div>
+ 
+ <div class="main"> 
+   <table> 
+　　<tr>
+   <td style="padding-left:20px; vertical-align:middle; color : #000000; background: #F4F5F7;">Date</td>
+   </tr>
+   <tr>
+   <td class="value" style="padding-left:60px; font-size:22px; vertical-align:middle;"><?var udate = getNow();?><?!=udate?></td>
+   </tr>
+   <tr>
+   <td style="padding-left:20px; vertical-align:middle; color : #000000; background: #F4F5F7;">Name</td>
+   </tr>
+   <tr>
+   <!-- <td class="value" style="padding-left:60px; font-size:22px; vertical-align:middle;"><?var uname = getusername();?><?!=uname?></td> -->
+   <td class="value"  style="padding-left:60px; font-size:22px; vertical-align:middle;"><?=vname?></td>
+   </tr>
+   <tr>
+   <td style="padding-left:20px; vertical-align:middle; color : #000000; background: #F4F5F7;">No.</td>
+   </tr>
+   <tr>
+   <td class="value"  style="padding-left:60px; font-size:22px; vertical-align:middle;"><?=no?></td>
+   </tr>
+   <tr>
+   <td style="padding-left:20px; vertical-align:middle; color : #000000; background: #F4F5F7; ">Item</td>
+   </tr>
+   <tr>
+   <td class="value" style="padding-left:60px; font-size:22px; vertical-align:middle;"><?=item?></td>
+   </tr>
+   <tr>
+   <td style="padding-left:20px; vertical-align:middle; color : #000000; background: #F4F5F7;">Sts</td>
+   </tr>
+   <tr>
+   <td class="value" style="color : #cc0000; padding-left:60px; font-size:22px; vertical-align:middle;"><?=name?></td>
+   </tr>   
+
+   </table>
+   </div> 
+   
+  <div class="footer">
+   
+  </div>
+  
+ 
+  </body>
+</html>
